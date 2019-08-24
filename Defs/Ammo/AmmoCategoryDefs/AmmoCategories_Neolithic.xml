@@ -23,7 +23,7 @@
 		<defName>SteelArrow</defName>
 		<label>steel arrow</label>
     <labelShort>steel</labelShort>
-		<description>The arrow head is made from steel to enhance armor penetration.</description>
+		<description>The sturdy arrow head is made from steel to enhance armor penetration.</description>
 		<advanced>true</advanced>
 	</CombatExtended.AmmoCategoryDef>
 
@@ -31,7 +31,7 @@
 		<defName>PlasteelArrow</defName>
 		<label>plasteel arrow</label>
     <labelShort>plasteel</labelShort>
-		<description>Fitted with a plasteel head to maximize armor penetration.</description>
+		<description>Fitted with a very sturdy plasteel head to maximize armor penetration.</description>
 		<advanced>true</advanced>
 	</CombatExtended.AmmoCategoryDef>
 

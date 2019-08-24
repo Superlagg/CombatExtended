@@ -23,7 +23,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="AmmoSlingBulletBase" ParentName="NeolithicAmmoBase" Abstract="True">
-    <description>An aerodynamic stone or metal pellet. Perfect for being launched by a sling.</description>
+    <description>Aerodynamic, lightweight pellet. Performs worse than arrows when slung.</description>
     <statBases>
       <Mass>0.05</Mass>
       <Bulk>0.08</Bulk>

@@ -23,7 +23,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="AmmoArrowBase" ParentName="NeolithicAmmoBase" Abstract="True">
-    <description>Simple arrow design with a cutting head attached to a wooden shaft.</description>
+    <description>Simple arrow design with a cutting head firmly attached to a wooden shaft.</description>
     <statBases>
       <Mass>0.11</Mass>
       <Bulk>0.11</Bulk>

@@ -23,7 +23,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="AmmoStreamlinedArrowBase" ParentName="NeolithicAmmoBase" Abstract="True">
-    <description>Arrow designed for higher velocity flight, being suitable to fire from a recurve bow.</description>
+    <description>Refined, elegant arrow design intended for high velocity flight and piercing impact.</description>
     <statBases>
       <Mass>0.09</Mass>
       <Bulk>0.13</Bulk>
@@ -114,7 +114,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>13</damageAmountBase>
 			<armorPenetrationBase>0.22</armorPenetrationBase>
-			<preExplosionSpawnChance>0.2</preExplosionSpawnChance>
+			<preExplosionSpawnChance>0.166</preExplosionSpawnChance>	<!-- 11.99 per resource -->
 			<preExplosionSpawnThingDef>Ammo_StreamlinedArrow_Stone</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
@@ -129,7 +129,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>13</damageAmountBase>
 			<armorPenetrationBase>0.3025</armorPenetrationBase>
-			<preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+			<preExplosionSpawnChance>0.5</preExplosionSpawnChance>	<!-- 20 per resource -->
 			<preExplosionSpawnThingDef>Ammo_StreamlinedArrow_Steel</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
@@ -144,7 +144,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>13</damageAmountBase>
 			<armorPenetrationBase>0.385</armorPenetrationBase>
-			<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+			<preExplosionSpawnChance>0.7</preExplosionSpawnChance>	<!-- 33.33 per resource -->
 			<preExplosionSpawnThingDef>Ammo_StreamlinedArrow_Plasteel</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>

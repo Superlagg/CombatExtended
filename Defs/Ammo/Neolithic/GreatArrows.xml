@@ -23,7 +23,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="AmmoGreatArrowBase" ParentName="NeolithicAmmoBase" Abstract="True">
-    <description>Heavy arrow designed to be fired from a great bow.</description>
+    <description>Crude, brutal arrow design packing a hefty punch.</description>
     <statBases>
       <Mass>0.17</Mass>
       <Bulk>0.17</Bulk>

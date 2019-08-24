@@ -42,6 +42,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
     <defName>Ammo_Flamethrower_Napalm</defName>
     <label>Napalm</label>
+    <description>A damaging flamethrower fuel which sticks to its target.</description>
     <graphicData>
       <texPath>Things/Ammo/FuelCell/Incendiary</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -55,6 +56,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
     <defName>Ammo_Flamethrower_Prometheum</defName>
     <label>jellied Prometheum</label>
+    <description>A highly damaging flamethrower fuel, nastier than even napalm.</description>
     <graphicData>
       <texPath>Things/Ammo/FuelCell/Incendiary</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

@@ -23,7 +23,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="AmmoCrossbowBoltBase" ParentName="NeolithicAmmoBase" Abstract="True">
-    <description>A crossbow bolt.</description>
+    <description>Short and heavy, some of the most damaging projectiles shot from a bow-like weapon.</description>
     <statBases>
       <Mass>0.1</Mass>
       <Bulk>0.1</Bulk>
