@@ -72,4 +72,13 @@ namespace CombatExtended.Harmony
             }
         }
     }
+    
+    [HarmonyPatch(typeof(ThingDef), "VolumePerUnit", MethodType.Getter)]
+    public class Harmony_ThingDef_VolumePerUnit
+    {
+        public static void Postfix(ThingDef __instance, ref float __result)
+        {
+            __result = __instance.GetStatValueAbstract(CE_StatDefOf.Bulk);
+        }
+    }
 }
