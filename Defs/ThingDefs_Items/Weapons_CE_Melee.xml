@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="BaseMeleeWeapon_CE" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <equipmentType>Primary</equipmentType>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>10</pathCost>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-3</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef Name="PoweredMeleeWeapon_CE" ParentName="BaseMeleeWeapon_CE" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisite>CE_PoweredMelee</researchPrerequisite>
+      <recipeUsers Inherit="false">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- ==================== Powered Mace ==================== -->
+
+  <ThingDef ParentName="PoweredMeleeWeapon_CE">
+    <defName>CE_Melee_PoweredMace</defName>
+    <label>powered mace</label>
+    <description>Raw blunt force trauma in a surprisingly agile package. A favorite among melee fighters, or at least those wealthy enough to afford one.</description>
+    <graphicData>
+      <texPath>Things/Weapons/PoweredMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>28000</WorkToMake>
+      <Mass>1.0</Mass>
+      <Bulk>3.5</Bulk>
+      <MeleeCounterParryBonus>1.25</MeleeCounterParryBonus>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>8.8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.15</armorPenetration>
+        <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>1.5</cooldownTime>
+        <chanceFactor>1.33</chanceFactor>
+        <armorPenetration>0.306</armorPenetration>
+        <linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <equippedStatOffsets>
+      <MeleeCritChance>0.5</MeleeCritChance>
+      <MeleeParryChance>0.375</MeleeParryChance>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ==================== Powered Short sword ==================== -->
+
+  <ThingDef ParentName="PoweredMeleeWeapon_CE">
+    <defName>CE_Melee_PoweredShortsword</defName>
+    <label>powered short sword</label>
+    <description>A highly-advanced short sword. Light and deadly, it makes for a popular backup weapon.</description>
+    <graphicData>
+      <texPath>Things/Weapons/PoweredShortsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>0.65</Mass>
+      <Bulk>3.5</Bulk>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <costList>
+      <Plasteel>60</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6.6</power>
+        <cooldownTime>1.12</cooldownTime>
+        <armorPenetration>0.174</armorPenetration>
+        <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>13.53</power>
+        <cooldownTime>1.12</cooldownTime>
+        <armorPenetration>0.488</armorPenetration>
+        <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>16.28</power>
+        <cooldownTime>1.12</cooldownTime>
+        <chanceFactor>1.33</chanceFactor>
+        <armorPenetration>0.294</armorPenetration>
+        <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <equippedStatOffsets>
+      <MeleeCritChance>0.5</MeleeCritChance>
+      <MeleeParryChance>0.375</MeleeParryChance>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ==================== Powered Warhammer ==================== -->
+
+  <ThingDef ParentName="PoweredMeleeWeapon_CE">
+    <defName>CE_Melee_PoweredWarhammer</defName>
+    <label>powered warhammer</label>
+    <description>With a legendary reputation for delivering knock-out blows through almost anything, the powered warhammer is the go-to choice for striking down heavily-armored foes in close combat.</description>
+    <graphicData>
+      <texPath>Things/Weapons/PoweredWarhammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>54000</WorkToMake>
+      <Mass>3.5</Mass>
+      <Bulk>10</Bulk>
+      <MeleeCounterParryBonus>2</MeleeCounterParryBonus>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <costList>
+      <Plasteel>150</Plasteel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>16.3</power>
+        <cooldownTime>2.2</cooldownTime>
+        <armorPenetration>0.234</armorPenetration>
+        <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>39</power>
+        <cooldownTime>2.2</cooldownTime>
+        <chanceFactor>1.33</chanceFactor>
+        <armorPenetration>0.478</armorPenetration>
+        <linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <equippedStatOffsets>
+      <MeleeCritChance>0.75</MeleeCritChance>
+      <MeleeParryChance>0.75</MeleeParryChance>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ==================== Powered Longsword ==================== -->
+
+  <ThingDef ParentName="PoweredMeleeWeapon_CE">
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <defName>CE_Melee_PoweredLongsword</defName>
+    <label>powered longsword</label>
+    <description>The cutting edge in slashing technology. This blade slices through most targets with unprecedented ease.</description>
+    <graphicData>
+      <texPath>Things/Weapons/PoweredLongsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>48000</WorkToMake>
+      <Mass>1.5</Mass>
+      <Bulk>8</Bulk>
+      <MeleeCounterParryBonus>2</MeleeCounterParryBonus>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <costList>
+      <Plasteel>120</Plasteel>
+      <ComponentIndustrial>15</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <tools>
+      <li Class="CombatExtended.ToolCE">
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9.9</power>
+        <cooldownTime>1.52</cooldownTime>
+        <armorPenetration>0.22</armorPenetration>
+        <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>23.1</power>
+        <cooldownTime>1.52</cooldownTime>
+        <armorPenetration>0.706</armorPenetration>
+        <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>1.52</cooldownTime>
+        <chanceFactor>33.33</chanceFactor>
+        <armorPenetration>0.454</armorPenetration>
+        <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <equippedStatOffsets>
+      <MeleeCritChance>0.75</MeleeCritChance>
+      <MeleeParryChance>0.75</MeleeParryChance>
+    </equippedStatOffsets>
+  </ThingDef>
+
+</Defs>
